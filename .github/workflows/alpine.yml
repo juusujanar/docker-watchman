@@ -31,7 +31,7 @@ jobs:
         with:
           push: true
           file: ./alpine/3.10/Dockerfile
-          tags: janarj/watchman:alpine-3.10-$WATCHMAN_VERSION
+          tags: "janarj/watchman:alpine-3.10-$WATCHMAN_VERSION"
           build-args: |
             WATCHMAN_VERSION=$WATCHMAN_VERSION
 
@@ -59,7 +59,7 @@ jobs:
         with:
           push: true
           file: ./alpine/3.11/Dockerfile
-          tags: janarj/watchman:alpine-3.11-$WATCHMAN_VERSION
+          tags: "janarj/watchman:alpine-3.11-$WATCHMAN_VERSION"
           build-args: |
             WATCHMAN_VERSION=$WATCHMAN_VERSION
 
@@ -87,7 +87,7 @@ jobs:
         with:
           push: true
           file: ./alpine/3.12/Dockerfile
-          tags: janarj/watchman:alpine-3.12-$WATCHMAN_VERSION
+          tags: "janarj/watchman:alpine-3.12-$WATCHMAN_VERSION"
           build-args: |
             WATCHMAN_VERSION=$WATCHMAN_VERSION
 
@@ -115,6 +115,6 @@ jobs:
         with:
           push: true
           file: ./alpine/3.13/Dockerfile
-          tags: janarj/watchman:alpine-3.13-$WATCHMAN_VERSION
+          tags: "janarj/watchman:alpine-3.13-$WATCHMAN_VERSION"
           build-args: |
             WATCHMAN_VERSION=$WATCHMAN_VERSION
