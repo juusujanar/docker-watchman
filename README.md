@@ -1,5 +1,7 @@
 ![alpine](https://github.com/juusujanar/docker-watchman/workflows/.github/workflows/alpine.yml/badge.svg)
 ![debian](https://github.com/juusujanar/docker-watchman/workflows/.github/workflows/debian.yml/badge.svg)
+![golang](https://github.com/juusujanar/docker-watchman/workflows/.github/workflows/golang.yml/badge.svg)
+![node](https://github.com/juusujanar/docker-watchman/workflows/.github/workflows/node.yml/badge.svg)
 
 # Facebook's Watchman in Docker
 

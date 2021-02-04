@@ -1,0 +1,112 @@
+name: Build Node v14 containers
+
+on:
+  push:
+    branches: master
+
+env:
+  WATCHMAN_VERSION: "v2021.02.01.00"
+
+jobs:
+  alpine:
+    name: Build alpine
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Login to DockerHub
+        uses: docker/login-action@v1 
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and push Node 14 on Alpine 3.10
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          file: ./node/14/alpine3.10/Dockerfile
+          # Will be enabled once Dockerfile configured to build from sources
+          # platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x
+          tags: |
+            janarj/watchman:node14-alpine3.10-${{ env.WATCHMAN_VERSION }}
+            janarj/watchman:node14-alpine3.10
+          build-args: |
+            WATCHMAN_VERSION=${{ env.WATCHMAN_VERSION }}
+
+      - name: Build and push Node 14 on Alpine 3.11
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          file: ./node/14/alpine3.11/Dockerfile
+          # Will be enabled once Dockerfile configured to build from sources
+          # platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x
+          tags: |
+            janarj/watchman:node14-alpine3.11-${{ env.WATCHMAN_VERSION }}
+            janarj/watchman:node14-alpine3.11
+          build-args: |
+            WATCHMAN_VERSION=${{ env.WATCHMAN_VERSION }}
+
+      - name: Build and push Node 14 on Alpine 3.12
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          file: ./node/14/alpine3.12/Dockerfile
+          # Will be enabled once Dockerfile configured to build from sources
+          # platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x
+          tags: |
+            janarj/watchman:node14-alpine3.12-${{ env.WATCHMAN_VERSION }}
+            janarj/watchman:node14-alpine3.12
+            janarj/watchman:node14-alpine
+          build-args: |
+            WATCHMAN_VERSION=${{ env.WATCHMAN_VERSION }}
+
+  debian:
+    name: Build debian
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Login to DockerHub
+        uses: docker/login-action@v1 
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and push Node 14 on Debian Buster
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          file: ./node/14/buster/Dockerfile
+          # Will be enabled once Dockerfile configured to build from sources
+          # platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x
+          tags: |
+            janarj/watchman:node14-buster-${{ env.WATCHMAN_VERSION }}
+            janarj/watchman:node14-buster
+            janarj/watchman:node14
+          build-args: |
+            WATCHMAN_VERSION=${{ env.WATCHMAN_VERSION }}
+
+      - name: Build and push Node 14 on Debian Stretch
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          file: ./node/14/stretch/Dockerfile
+          # Will be enabled once Dockerfile configured to build from sources
+          # platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x
+          tags: |
+            janarj/watchman:node14-stretch-${{ env.WATCHMAN_VERSION }}
+            janarj/watchman:node14-stretch
+          build-args: |
+            WATCHMAN_VERSION=${{ env.WATCHMAN_VERSION }}
