@@ -1,7 +1,9 @@
-![alpine](https://github.com/juusujanar/docker-watchman/workflows/.github/workflows/alpine.yml/badge.svg)
-![debian](https://github.com/juusujanar/docker-watchman/workflows/.github/workflows/debian.yml/badge.svg)
-![golang](https://github.com/juusujanar/docker-watchman/workflows/.github/workflows/golang.yml/badge.svg)
-![node](https://github.com/juusujanar/docker-watchman/workflows/.github/workflows/node.yml/badge.svg)
+![Build Alpine containers](https://github.com/juusujanar/docker-watchman/workflows/Build%20Alpine%20containers/badge.svg)
+![Build Debian containers](https://github.com/juusujanar/docker-watchman/workflows/Build%20Debian%20containers/badge.svg)
+![Build Golang containers](https://github.com/juusujanar/docker-watchman/workflows/Build%20Golang%20containers/badge.svg)
+![Build Node v12 containers](https://github.com/juusujanar/docker-watchman/workflows/Build%20Node%20v12%20containers/badge.svg)
+![Build Node v14 containers](https://github.com/juusujanar/docker-watchman/workflows/Build%20Node%20v14%20containers/badge.svg)
+![Build Node v15 containers](https://github.com/juusujanar/docker-watchman/workflows/Build%20Node%20v15%20containers/badge.svg)
 
 # Facebook's Watchman in Docker
 
