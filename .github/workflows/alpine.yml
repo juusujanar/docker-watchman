@@ -34,8 +34,8 @@ jobs:
           # Will be enabled once Dockerfile configured to build from sources
           # platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x
           tags: |
-            janarj/watchman:alpine-3.10-${{ env.WATCHMAN_VERSION }}
-            janarj/watchman:alpine-3.10
+            janarj/watchman:alpine3.10-${{ env.WATCHMAN_VERSION }}
+            janarj/watchman:alpine3.10
           build-args: |
             WATCHMAN_VERSION=${{ env.WATCHMAN_VERSION }}
 
@@ -47,8 +47,8 @@ jobs:
           # Will be enabled once Dockerfile configured to build from sources
           # platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x
           tags: |
-            janarj/watchman:alpine-3.11-${{ env.WATCHMAN_VERSION }}
-            janarj/watchman:alpine-3.11
+            janarj/watchman:alpine3.11-${{ env.WATCHMAN_VERSION }}
+            janarj/watchman:alpine3.11
           build-args: |
             WATCHMAN_VERSION=${{ env.WATCHMAN_VERSION }}
 
@@ -60,8 +60,8 @@ jobs:
           # Will be enabled once Dockerfile configured to build from sources
           # platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x
           tags: |
-            janarj/watchman:alpine-3.12-${{ env.WATCHMAN_VERSION }}
-            janarj/watchman:alpine-3.12
+            janarj/watchman:alpine3.12-${{ env.WATCHMAN_VERSION }}
+            janarj/watchman:alpine3.12
           build-args: |
             WATCHMAN_VERSION=${{ env.WATCHMAN_VERSION }}
 
@@ -73,8 +73,8 @@ jobs:
           # Will be enabled once Dockerfile configured to build from sources
           # platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x
           tags: |
-            janarj/watchman:alpine-3.13-${{ env.WATCHMAN_VERSION }}
-            janarj/watchman:alpine-3.13
+            janarj/watchman:alpine3.13-${{ env.WATCHMAN_VERSION }}
+            janarj/watchman:alpine3.13
             janarj/watchman:alpine-${{ env.WATCHMAN_VERSION }}
             janarj/watchman:alpine
           build-args: |
