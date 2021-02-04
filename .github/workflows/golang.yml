@@ -8,7 +8,7 @@ env:
   WATCHMAN_VERSION: "v2021.02.01.00"
 
 jobs:
-  golang1.14-alpine:
+  golang1_14-alpine:
     name: Golang 1.14 on Alpine
     runs-on: ubuntu-latest
     steps:
@@ -67,7 +67,7 @@ jobs:
             WATCHMAN_VERSION=${{ env.WATCHMAN_VERSION }}
 
 
-  golang1.14-debian:
+  golang1_14-debian:
     name: Golang 1.14 on Debian
     runs-on: ubuntu-latest
     steps:
@@ -116,7 +116,7 @@ jobs:
 
 
 
-  golang1.15-alpine:
+  golang1_15-alpine:
     name: Golang 1.15 on Alpine
     runs-on: ubuntu-latest
     steps:
@@ -164,7 +164,7 @@ jobs:
 
 
 
-  golang1.15-debian:
+  golang1_15-debian:
     name: Golang 1.15 on Debian
     runs-on: ubuntu-latest
     steps:
