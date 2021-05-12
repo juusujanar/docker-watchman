@@ -12,7 +12,7 @@ jobs:
     name: Golang 1.14 on Alpine
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.3.4
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
@@ -71,7 +71,7 @@ jobs:
     name: Golang 1.14 on Debian
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.3.4
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
@@ -120,7 +120,7 @@ jobs:
     name: Golang 1.15 on Alpine
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.3.4
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
@@ -168,7 +168,7 @@ jobs:
     name: Golang 1.15 on Debian
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.3.4
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
